@@ -1,5 +1,5 @@
-# practice_N1_PI
-Practical lesson in software engineering number 1.
+# practice_SE
+Practical lessons in software engineering number.
 ## Участники команды
 - Сорокин Андрей Дмитриевич (РИМ-130907)
 - Кунгурцев Дмитрий Станиславович (РИМ-130907)
@@ -32,4 +32,13 @@ unmasker("Hello I'm a <mask> model.")
   'sequence': "Hello I'm a sexy model.",
   'token': 17473,
   'token_str': 'sexy'}]
+```
+## Использование веб-приложения из репозитория
+Для того, чтобы использовать веб приложение локально, необходимо установить библиотеки из requirements.txt, написав в командной строке ОС:
+```
+pip install -r requirements.txt
+```
+После установки необходимых библиотек требуется выполнить следующую команду ***из директории с файлами ```unmask.py``` и ```streamlit_web.py```***:
+```
+streamlit run ./streamlit_web.py
 ```
