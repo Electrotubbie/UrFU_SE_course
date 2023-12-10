@@ -1,5 +1,7 @@
 import streamlit as st
-from unmask import unmasker
+from transformers import pipeline
+
+unmasker = pipeline('fill-mask', model='xlm-roberta-base')
 
 st.title("Заполнение пропуска")
 st.divider()
