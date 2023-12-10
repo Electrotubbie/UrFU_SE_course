@@ -1,6 +1,6 @@
 from transformers import pipeline
 
-unmasker = pipeline('fill-mask', model='xlm-roberta-base')
+unmasker = pipeline('fill-mask', model='roberta-base')
 # Ниже код для проверки работы модели в 1 задании, далее теряет актуальность
 # text = "Hello, i'm a <mask> model."
 # variants = unmasker(text)
