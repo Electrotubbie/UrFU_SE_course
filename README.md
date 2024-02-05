@@ -1,5 +1,5 @@
 # practice_SE
-Practical lessons in software engineering number.
+Practical work on the UrFU software engineering course
 ## Участники команды
 - Сорокин Андрей Дмитриевич (РИМ-130907)
 - Кунгурцев Дмитрий Станиславович (РИМ-130907)
