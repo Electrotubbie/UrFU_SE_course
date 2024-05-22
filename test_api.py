@@ -4,11 +4,15 @@ from unmask import unmasker
 
 client = TestClient(app)
 
+
 def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {'message': 'С помощью рассматриваемой модели выполняется заполнение пропущенного слова на наиболее подходящее. \
-            В качестве входных данных принимается предложение с помеченным <mask> пропущенным словом.'}
+    assert response.json() == {'message': 'С помощью рассматриваемой модели \
+    выполняется заполнение пропущенного слова на наиболее подходящее. \
+    В качестве входных данных принимается предложение с помеченным <mask> \
+    пропущенным словом.'}
+
 
 def test_unmask_api():
     text = "Try to test <mask> application."
@@ -17,6 +21,7 @@ def test_unmask_api():
     unmask_data = unmasker(text)
     assert response.status_code == 200
     assert json_data == unmask_data
+
 
 def test_unmask_result():
     text = "Today is a <mask> weather."
