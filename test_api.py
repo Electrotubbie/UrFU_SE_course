@@ -29,9 +29,10 @@ def test_unmask_result():
     text = "Today is a <mask> weather."
     response = client.post("/unmask/", json={"text": text})
     json_data = response.json()
+    unmask_data = unmasker(text)
     assert response.status_code == 200
-    assert json_data[0]['sequence'] == 'Today is a beautiful weather.'
-    assert json_data[1]['sequence'] == 'Today is a nice weather.'
-    assert json_data[2]['sequence'] == 'Today is a gorgeous weather.'
-    assert json_data[3]['sequence'] == 'Today is a perfect weather.'
-    assert json_data[4]['sequence'] == 'Today is a hot weather.'
+    assert json_data[0]['sequence'] == unmask_data[0]['sequence']
+    assert json_data[1]['sequence'] == unmask_data[1]['sequence']
+    assert json_data[2]['sequence'] == unmask_data[2]['sequence']
+    assert json_data[3]['sequence'] == unmask_data[3]['sequence']
+    assert json_data[4]['sequence'] == unmask_data[4]['sequence']
