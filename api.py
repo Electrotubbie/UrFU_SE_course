@@ -21,4 +21,5 @@ async def root():
 
 @app.post('/unmask/')
 async def unmask(item: Item):
-    return unmasker(item.text)
+    result = unmasker(item.text)
+    return result
